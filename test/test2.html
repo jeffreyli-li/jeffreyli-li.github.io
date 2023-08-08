@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"> 
+var intervalId = null; 
+function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){ 
+  this.stayTime=nStayTime*3000 || 9000; 
+  this.maxHeigth=nMaxHth || 712; 
+  this.minHeigth=nMinHth || 1; 
+  this.state=sState || "down" ; 
+  var obj = document.getElementById(id); 
+  if(intervalId != null)window.clearInterval(intervalId); 
+function openBox(){ 
+       var h = obj.offsetHeight; 
+       obj.style.height = ((this.state == "down") ? (h + 3) : (h - 3))+"px"; 
+    if(obj.offsetHeight>this.maxHeigth){ 
+        window.clearInterval(intervalId); 
+        intervalId=window.setInterval(closeBox,this.stayTime); 
+    } 
+    if (obj.offsetHeight<this.minHeigth){ 
+        window.clearInterval(intervalId); 
+        obj.style.display="none"; 
+    }     
+
+} 
+
+function closeBox(){ 
+       slideAd(id,this.stayTime,"up",nMaxHth,nMinHth); 
+  } 
+      intervalId = window.setInterval(openBox,10); 
+}
+</script>
+</head>
+
+<body>
+	<div id="MyMoveAd" style="height:12px; width:960px; margin:0 auto;overflow:hidden;">
+        <a href='PC.html'><img src="C:\Users\66\Desktop\BG.jpg" /></a>
+    </div>
+    <script type="text/javascript"> 
+     <!-- 
+     function openimg(){
+        slideAd('MyMoveAd',2); 
+     }
+        setTimeout(openimg,4000)
+-->
+    </script>
+<input type="text" id="clock" size="35" />
+<script language=javascript>
+var int=self.setInterval("clock()",50)
+function clock()
+  {
+  var t=new Date()
+  document.getElementById("clock").value=t
+  }
+</script>
+
+</body>
+</html>

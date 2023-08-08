@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<style>
+		html {
+			background-color:#d0f4fe
+		}
+		h1 {
+			color:red
+		}
+	</style>
+	<script type="text/javascript">
+		function browserRedirect() {
+			   var sUserAgent = navigator.userAgent.toLowerCase();
+			   if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+				   //不干
+			   } else {
+				   window.location.href="xuexi.html";
+			   }
+		   }
+		browserRedirect(); 
+	</script>
+</head>
+<body>
+	 <h1>学习网站1.0</h1>
+	 <hr/>
+	 <a href='wenzhang1.html' class="button button-pill button-large">学习网站1.0内测版正式开始运营了！</a>
+</body>
+</html>

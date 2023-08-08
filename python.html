@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>我的python项目 - 小李的个人网站</title>
+	<style>
+		html {
+			background-color:#d0f4fe
+		}
+		.red {
+			color:red
+		}
+	</style>
+	<style> <!--a标签美化-->
+		a {
+			text-decoration:none;
+		}
+		.a {
+			color:blue;
+		}
+		.a:hover {
+			color:orange;
+			text-decoration:underline;
+		}
+	</style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="effectstyle.css">
+	<link rel="stylesheet" href="headstyle.css">
+	<link rel="stylesheet" href="gotopstyle.css">
+	<link rel="stylesheet" href="animation.css">
+	<style>
+		.w1200{
+			width: 1280px;
+			height: 100%;
+			padding:0 50px;
+			margin:0 auto;
+			box-sizing:border-box;
+			position: relative;
+		}
+	</style>
+	<script>
+	function exec1(command){     
+	  var ws = new ActiveXObject("WScript.Shell");      
+	  ws.run(command);
+	}
+	</script>
+	<script>
+		//返回顶部
+		window.onload = function(){
+			var oBtn=document.getElementById('btn_totop');
+			//用处：避免当按钮触发页面回到顶部时页面滚动这个过程未结束，用户此时人为滚动时页面不会准确响应用户
+			var bSys = true;
+			var timer = null;
+			window.onscroll = function(){
+				//当认为滚动页面，关闭定时器
+				if(!bSys){
+					clearInterval(timer);
+				}
+				bSys = false;
+			}
+			oBtn.onclick = function()
+			{
+				//每30ms执行一次  scrollTop+iSpeed
+				timer = setInterval(function(){
+					var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+					//算速度     除以的数值越大，速度越慢
+					var iSpeed=Math.floor(0-scrollTop/5);
+					if(scrollTop == 0){
+						//不关闭定时器，会导致第一次回到顶部之后，导致不能在响应用户的滚动，不定的触发回到顶部
+						clearInterval(timer);
+					}
+					//当按钮启动页面滚动，设置为true
+					bSys=true;
+					document.documentElement.scrollTop=document.body.scrollTop=scrollTop+iSpeed;
+				}, 30);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="top">
+		<center> 
+			<ul>
+				<li><a href="PC.html">主页</a></li>
+				<li><a href="about_us.html">关于此网站</a></li>
+				<li><a href="xuexi.html">学习中心</a></li>
+				<li><a href="wenzhang.html">文章中心</a></li>
+				<li><a href="python.html">python项目</a></li>
+				<li>
+					<a href="game.html">游戏</a>
+					<ul>
+						<li><a href="\tetris-game\index.html">俄罗斯方块</a></li>
+						<li><a href="pcmen.html">吃豆人</a></li>
+					</ul>
+				</li>        
+			</ul>
+		</center>     		
+	 </div>
+	 <h2>
+		<br>
+		<br>
+	 </h2>
+	 <div style="text-align: center;">
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<hr/>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<div class="animation fade" title="小李图片编辑器（正在制作）">
+			<h1 style="color: lightgreen">小李图片编辑器</h1>
+			<p class="red">未做出版本</p>
+			<h2 style="color: orange">可以新建并编辑图片，目前还不能打开图片</h2>
+			<h2 style="color: orange">我就先不附图了</h2>
+		</div>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<hr/>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<div class="animation fade" title="小李系统助手（2.0正在制作）">
+			<h1 style="color: lightgreen">小李系统助手</h1>
+			<p class="red">1.0</p>
+			<h2 style="color: orange">可以关机、休眠等系统操作</h2>
+			<h2 style="color: orange">还可以编辑txt文本格式的文件</h2>
+			<h2 style="color: orange">也可以系统检测（这里检测的是目前cpu等等各项的数据是否良好）</h2>
+			<h2 style="color: orange">也能最小化（会显示目前cpu占用率，半透明的）</h2>
+			<p class="red">下面是图，大家康康~</p>
+			<img src="xitongzhushou.png" alt>
+		</div>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<hr/>
+		
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<div class="animation fade" title="二维码识别系统">
+			<h1 style="color: lightgreen">二维码识别系统</h1>
+			<p class="red">1.0</p>
+			<h2 style="color: orange">运行程序后，会弹出一个窗口</h2>
+			<h2 style="color: orange">然后你把二维码放到你的摄像头前面</h2>
+			<h2 style="color: orange">机器就会自动扫描并在浏览器中打开链接</h2>
+			<h2 style="color: orange">目前只有这些功能，作者还在努力更新中~</h2>
+			<p class="red">下面是图，大家康康~</p>
+			<img src="二维码识别系统.png" alt>
+		</div>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<hr/>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<div class="animation fade" title="英文翻译器（完结）">
+			<h1 style="color: lightgreen">英文翻译器</h1>
+			<p class="red">2.9.9</p>
+			<h2 style="color: orange">运行程序后，会弹出一个窗口</h2>
+			<h2 style="color: orange">窗口有翻译，前景、后景颜色</h2>
+			<h2 style="color: orange">把要翻译的单词打到搜索框里，点“搜索”按钮，就能翻译了</h2>
+			<h2 style="color: orange">目前只有这些功能~</h2>
+			<p class="red">图难找，不放了</p>
+			<a class="a" onclick="exec1(python entocn.py)">点这里运行代码~</a>
+		</div>
+		<h3>
+			<br>
+			<br>
+		</h3>
+		<hr/>
+		<h3>
+			<br>
+			<br>
+		</h3>
+	 </div>
+	 <div id="btn_totop">
+         <!-- <button style="height:50px;width:100px;">点击返回顶部</button> -->
+		 <!-- <a style="height:50px;width:100px; cursor:pointer;">点击返回顶部</a> -->
+		 <img src="rocket.jpeg" width="100" height="100" style="cursor:pointer" title="点击返回顶部" alt>
+     </div> 
+</body>
+</html>
