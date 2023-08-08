@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="charset" content="utf-8">
+	<link rel="stylesheet" href="button.css">
+	<style>
+		html {
+			background-color:#d0f4fe
+		}
+		.red {
+			color:red
+		}
+	</style>
+	<title>学习专区 - 小李的个人网站</title>
+	<script type="text/javascript">
+		function browserRedirect() {
+			   var sUserAgent = navigator.userAgent.toLowerCase();
+			   if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+				   //跳转移动端页面
+				   window.location.href="phonexuexi.html";
+			   } else {
+				   //啥也不干
+			   }
+		   }
+		browserRedirect(); 
+	</script>
+	<link rel="stylesheet" href="headstyle.css">
+	<link rel="stylesheet" href="gotopstyle.css">
+</head>
+<body>
+	<div class="top">
+		<center> 
+			<ul>
+				<li><a href="PC.html">主页</a></li>
+				<li><a href="about_us.html">关于此网站</a></li>
+				<li><a href="xuexi.html">学习中心</a></li>
+				<li><a href="wenzhang.html">文章中心</a></li>
+				<li><a href="python.html">python项目</a></li>
+				<li>
+					<a href="game.html">游戏</a>
+					<ul>
+						<li><a href="\tetris-game\index.html">俄罗斯方块</a></li>
+						<li><a href="pcmen.html">吃豆人</a></li>
+					</ul>
+				</li>        
+			</ul>
+		</center>
+	 </div>
+	 <h1>
+		<br>
+		<br>
+	 </h1>
+	<h1 class="red">学习网站1.0</h1>
+	<br>
+	<hr/>
+	<br>
+	<a href='wenzhang1.html' class="button button-pill button-large">学习网站1.0内测版正式开始运营了！</a>
+	<br>
+	<br>
+	<hr/>
+	<br>
+	<a href='xuanze1.html' class="button button-pill button-large">学习网站1.0选择题！</a>
+</body>
+</html>
